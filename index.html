@@ -4,7 +4,27 @@
 <head>
   <meta charset="UTF-8" />
   <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Focused Tech Coaching</title>
+  <title>Focused Tech Coaching – Home Tech Help, WiFi Fixes, Streaming Setup</title>
+
+  <!-- ======================= SEO META TAGS ======================= -->
+  <meta name="description" content="Focused Tech Coaching helps families and homeowners with streaming setup, cable cutting, WiFi fixes, smart home installation, camera setup, and device training. Serving Seacoast NH & North Shore MA. Call 603-833-0660." />
+  <meta name="keywords" content="tech help, home tech support, streaming setup, Roku help, WiFi fixes, cable cutting, smart home installation, Hampton NH tech help, Seacoast NH tech support" />
+  <meta name="author" content="Focused Tech Coaching" />
+
+  <!-- Open Graph (Social Sharing) -->
+  <meta property="og:title" content="Focused Tech Coaching – Simple, Stress-Free Tech Help" />
+  <meta property="og:description" content="WiFi fixes, streaming setup, cable cutting, smart home installation, camera setup, and tech training. Call 603-833-0660." />
+  <meta property="og:image" content="https://focusedtechcoach.com/preview.jpg" />
+  <meta property="og:type" content="website" />
+  <meta property="og:url" content="https://focusedtechcoach.com" />
+
+  <!-- Local Business SEO -->
+  <meta property="business:contact_data:country_name" content="USA" />
+  <meta property="business:contact_data:locality" content="Hampton" />
+  <meta property="business:contact_data:region" content="NH" />
+  <meta property="business:contact_data:postal_code" content="03842" />
+  <meta property="business:contact_data:phone_number" content="+16038330660" />
+  <meta property="business:contact_data:website" content="https://focusedtechcoach.com" />
 
   <!-- TailwindCSS CDN -->
   <script src="https://cdn.tailwindcss.com"></script>
@@ -12,7 +32,7 @@
   <!-- Lucide Icons -->
   <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
 
-  <!-- Fonts -->
+  <!-- Google Fonts -->
   <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
 
   <style>
@@ -20,7 +40,6 @@
       font-family: 'Inter', sans-serif;
     }
 
-    /* Smooth fade-up animations */
     .fade-up {
       opacity: 0;
       transform: translateY(20px);
@@ -33,6 +52,31 @@
         transform: translateY(0);
       }
     }
+
+    /* Sticky mobile bar (only on mobile) */
+    @media (max-width: 768px) {
+      .mobile-sticky-bar {
+        position: fixed;
+        bottom: 0;
+        left: 0;
+        right: 0;
+        background: #0ea5e9;
+        color: white;
+        display: flex;
+        justify-content: space-between;
+        padding: 14px 22px;
+        font-size: 1.2rem;
+        font-weight: 600;
+        z-index: 9999;
+      }
+
+      .mobile-sticky-bar a {
+        color: white;
+        display: flex;
+        align-items: center;
+        gap: 8px;
+      }
+    }
   </style>
 </head>
 
@@ -42,16 +86,11 @@
   <!-- ======================= HERO SECTION ===================== -->
   <!-- ========================================================= -->
   <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 overflow-hidden">
-
-    <!-- Pattern Overlay -->
-    <div class="absolute inset-0 opacity-10">
-      <div class="absolute inset-0"
-        style="background-image:url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
-      </div>
+    <div class="absolute inset-0 opacity-10"
+      style="background-image:url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
     </div>
 
     <div class="relative z-10 text-center px-6 max-w-4xl fade-up">
-      <!-- Logo -->
       <div class="w-28 h-28 mx-auto mb-10 rounded-2xl bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center shadow-xl">
         <span class="text-white text-3xl font-bold">FTC</span>
       </div>
@@ -87,7 +126,8 @@
       <h2 class="text-4xl font-bold text-center mb-12 fade-up">Services I Offer</h2>
 
       <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 fade-up">
-        <!-- Service card -->
+
+        <!-- Streaming -->
         <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
           <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
             <i data-lucide="tv" class="w-8 h-8 text-blue-600"></i>
@@ -96,6 +136,7 @@
           <p class="text-gray-600">Roku, Fire Stick, Apple TV, and app organization.</p>
         </div>
 
+        <!-- Cable Cutting -->
         <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
           <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
             <i data-lucide="scissors" class="w-8 h-8 text-blue-600"></i>
@@ -104,6 +145,7 @@
           <p class="text-gray-600">Replace expensive cable with streaming and save money.</p>
         </div>
 
+        <!-- WiFi -->
         <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
           <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
             <i data-lucide="wifi" class="w-8 h-8 text-blue-600"></i>
@@ -112,6 +154,7 @@
           <p class="text-gray-600">Improve speed, coverage, and router performance.</p>
         </div>
 
+        <!-- Smart Home -->
         <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
           <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
             <i data-lucide="home" class="w-8 h-8 text-blue-600"></i>
@@ -120,6 +163,7 @@
           <p class="text-gray-600">Doorbells, speakers, plugs, lights, and automations.</p>
         </div>
 
+        <!-- Tech Support -->
         <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
           <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
             <i data-lucide="smartphone" class="w-8 h-8 text-blue-600"></i>
@@ -128,6 +172,7 @@
           <p class="text-gray-600">Phones, tablets, computers, and smart TVs.</p>
         </div>
 
+        <!-- Cameras -->
         <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
           <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
             <i data-lucide="camera" class="w-8 h-8 text-blue-600"></i>
@@ -135,13 +180,14 @@
           <h3 class="font-bold text-xl mb-3">Security Camera Setup</h3>
           <p class="text-gray-600">Indoor/outdoor cameras professionally configured.</p>
         </div>
+
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================= -->
-  <!-- ========================= ABOUT ========================== -->
+  <!-- ======================= ABOUT =========================== -->
   <!-- ========================================================= -->
   <section class="py-24 px-6 bg-gradient-to-br from-gray-50 to-blue-50">
     <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center fade-up">
@@ -163,22 +209,51 @@
 
 
   <!-- ========================================================= -->
-  <!-- ======================= SERVICE AREA ===================== -->
+  <!-- ======================= PRICING ========================== -->
   <!-- ========================================================= -->
-  <section class="py-24 px-6 bg-gradient-to-br from-green-50 to-blue-50 fade-up">
-    <div class="max-w-6xl mx-auto text-center">
+  <section class="py-24 px-6 bg-white fade-up">
+    <div class="max-w-6xl mx-auto">
 
-      <h2 class="text-4xl font-bold mb-10">Serving the Seacoast NH & North Shore MA</h2>
+      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Pricing</h2>
 
-      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
-        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Hampton</div>
-        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Seabrook</div>
-        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Portsmouth</div>
-        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Exeter</div>
-        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Salisbury</div>
-        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Newburyport</div>
-        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Rowley</div>
-        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Amesbury</div>
+      <div class="grid md:grid-cols-3 gap-8">
+
+        <!-- Basic -->
+        <div class="border rounded-2xl p-10 shadow hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold mb-4">Basic Visit</h3>
+          <p class="text-gray-600 mb-4">Quick fixes & minor help</p>
+          <p class="text-4xl font-extrabold mb-6">$50</p>
+          <ul class="text-gray-600 space-y-2 mb-6">
+            <li>• Simple questions</li>
+            <li>• Device troubleshooting</li>
+            <li>• Remote or in-person</li>
+          </ul>
+        </div>
+
+        <!-- Standard -->
+        <div class="border rounded-2xl p-10 shadow-lg hover:shadow-2xl transition bg-blue-50">
+          <h3 class="text-2xl font-bold mb-4">Standard Visit</h3>
+          <p class="text-gray-600 mb-4">Most popular choice</p>
+          <p class="text-4xl font-extrabold mb-6">$99</p>
+          <ul class="text-gray-600 space-y-2 mb-6">
+            <li>• Streaming setup</li>
+            <li>• WiFi optimization</li>
+            <li>• Smart home integration</li>
+          </ul>
+        </div>
+
+        <!-- Premium -->
+        <div class="border rounded-2xl p-10 shadow hover:shadow-2xl transition">
+          <h3 class="text-2xl font-bold mb-4">Premium Visit</h3>
+          <p class="text-gray-600 mb-4">Full home tech refresh</p>
+          <p class="text-4xl font-extrabold mb-6">$150</p>
+          <ul class="text-gray-600 space-y-2 mb-6">
+            <li>• Whole-home WiFi fix</li>
+            <li>• Complete TV setup</li>
+            <li>• Smart home automation</li>
+          </ul>
+        </div>
+
       </div>
     </div>
   </section>
@@ -212,6 +287,12 @@
     </div>
     <p class="text-gray-500">© 2025 Focused Tech Coaching. All rights reserved.</p>
   </footer>
+
+  <!-- Mobile Sticky Bar -->
+  <div class="mobile-sticky-bar md:hidden">
+    <a href="tel:6038330660"><i data-lucide="phone"></i> Call</a>
+    <a href="sms:6038330660"><i data-lucide="message-circle"></i> Text</a>
+  </div>
 
   <script>
     lucide.createIcons();
