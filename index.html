@@ -2,206 +2,220 @@
 <html lang="en">
 
 <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Focused Tech Coaching</title>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Focused Tech Coaching</title>
 
-    <!-- Google Fonts -->
-    <link rel="preconnect" href="https://fonts.googleapis.com">
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+  <!-- TailwindCSS CDN -->
+  <script src="https://cdn.tailwindcss.com"></script>
 
-    <!-- Stylesheet -->
-    <link rel="stylesheet" href="style.css" />
+  <!-- Lucide Icons -->
+  <script src="https://unpkg.com/lucide@latest/dist/umd/lucide.min.js"></script>
+
+  <!-- Fonts -->
+  <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+
+  <style>
+    body {
+      font-family: 'Inter', sans-serif;
+    }
+
+    /* Smooth fade-up animations */
+    .fade-up {
+      opacity: 0;
+      transform: translateY(20px);
+      animation: fadeUp 0.8s forwards;
+    }
+
+    @keyframes fadeUp {
+      to {
+        opacity: 1;
+        transform: translateY(0);
+      }
+    }
+  </style>
 </head>
 
-<body>
+<body class="bg-white text-gray-900">
 
-    <!-- ========================================================= -->
-    <!-- =======================  NAVBAR  ========================= -->
-    <!-- ========================================================= -->
-    <nav class="navbar">
-        <div class="container nav-flex">
-            <div class="logo">FocusedTechCoach</div>
-            <div>
-                <a href="tel:6038330660" class="nav-btn">Call</a>
-                <a href="mailto:focusedtechcoach@gmail.com" class="nav-btn">Email</a>
-            </div>
-        </div>
-    </nav>
+  <!-- ========================================================= -->
+  <!-- ======================= HERO SECTION ===================== -->
+  <!-- ========================================================= -->
+  <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 overflow-hidden">
 
+    <!-- Pattern Overlay -->
+    <div class="absolute inset-0 opacity-10">
+      <div class="absolute inset-0"
+        style="background-image:url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+      </div>
+    </div>
 
+    <div class="relative z-10 text-center px-6 max-w-4xl fade-up">
+      <!-- Logo -->
+      <div class="w-28 h-28 mx-auto mb-10 rounded-2xl bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center shadow-xl">
+        <span class="text-white text-3xl font-bold">FTC</span>
+      </div>
 
-    <!-- ========================================================= -->
-    <!-- =====================  HERO SECTION  ===================== -->
-    <!-- ========================================================= -->
-    <header class="hero">
-        <div class="container hero-content">
+      <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
+        Simple, Stress-Free Tech Help<br>for Your Home.
+      </h1>
 
-            <div class="hero-left">
-                <h1>Simple, Stress-Free Tech Help<br>for Your Home.</h1>
+      <p class="text-gray-700 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
+        Streaming setup • Cable cutting • Wi-Fi fixes • Smart home • Cameras • Device training
+      </p>
 
-                <p class="subtitle">
-                    Streaming setup · Cable cutting · Wi-Fi fixes · Smart home · Cameras · Device training
-                </p>
-
-                <div class="buttons">
-                    <a href="tel:6038330660" class="btn primary">
-                        Call or Text: 603-833-0660
-                    </a>
-
-                    <a href="mailto:focusedtechcoach@gmail.com" class="btn secondary">
-                        Email Me
-                    </a>
-                </div>
-            </div>
-
-            <div class="hero-right">
-                <img src="https://cdn-icons-png.flaticon.com/512/5181/5181869.png" class="hero-img" alt="Technology Icon">
-            </div>
-
-        </div>
-    </header>
-
-
-
-    <!-- ========================================================= -->
-    <!-- =====================  SERVICES SECTION  ================= -->
-    <!-- ========================================================= -->
-    <section class="services container">
-
-        <h2>Professional Services</h2>
-        <p class="section-subtitle">
-            Expert setup and support for all your home technology
-        </p>
-
-        <div class="service-grid">
-
-            <!-- Service Card 1 -->
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/1995/1995574.png" alt="Streaming Icon">
-                <h3>Streaming Setup</h3>
-                <p>Smart TVs, Roku, Fire Stick, Apple TV & app organization.</p>
-            </div>
-
-            <!-- Service Card 2 -->
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/891/891399.png" alt="Cable Cutting Icon">
-                <h3>Cable Cutting</h3>
-                <p>Replace cable with streaming and save money monthly.</p>
-            </div>
-
-            <!-- Service Card 3 -->
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/1048/1048877.png" alt="Wi-Fi Icon">
-                <h3>Wi-Fi Improvements</h3>
-                <p>Better speed, stronger coverage, router optimization.</p>
-            </div>
-
-            <!-- Service Card 4 -->
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/3468/3468377.png" alt="Smart Home Icon">
-                <h3>Smart Home Setup</h3>
-                <p>Cameras, doorbells, smart speakers, automations & more.</p>
-            </div>
-
-            <!-- Service Card 5 -->
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/455/455705.png" alt="Tech Support Icon">
-                <h3>Tech Support & Training</h3>
-                <p>Phones, tablets, computers, and smart devices.</p>
-            </div>
-
-            <!-- Service Card 6 -->
-            <div class="card">
-                <img src="https://cdn-icons-png.flaticon.com/512/3064/3064197.png" alt="Camera Icon">
-                <h3>Security Cameras</h3>
-                <p>Indoor/outdoor camera setup, placement & configuration.</p>
-            </div>
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ========================================================= -->
-    <!-- ======================  ABOUT SECTION  =================== -->
-    <!-- ========================================================= -->
-    <section class="about">
-
-        <div class="container about-flex">
-
-            <div class="about-text">
-                <h2>Meet Your Local Tech Coach</h2>
-
-                <p>
-                    Hi, I'm Josh — your friendly neighborhood tech problem solver.
-                    I help families and homeowners make their technology easy,
-                    organized, and frustration-free. I come to your home,
-                    ensure everything is set up perfectly, then teach you how to use it
-                    in plain English.
-                </p>
-            </div>
-
-            <img src="https://cdn-icons-png.flaticon.com/512/847/847969.png" class="about-img" alt="Tech Coach Icon">
-
-        </div>
-
-    </section>
-
-
-
-    <!-- ========================================================= -->
-    <!-- ===================  SERVICE AREA SECTION  =============== -->
-    <!-- ========================================================= -->
-    <section class="service-area container">
-
-        <h2>Service Area</h2>
-        <p class="section-subtitle">Proudly serving New Hampshire & Massachusetts</p>
-
-        <div class="area-grid">
-            <div>Hampton</div>
-            <div>Seabrook</div>
-            <div>Portsmouth</div>
-            <div>Exeter</div>
-            <div>Salisbury</div>
-            <div>Newburyport</div>
-            <div>Rowley</div>
-            <div>Amesbury</div>
-        </div>
-
-    </section>
-
-
-
-    <!-- ========================================================= -->
-    <!-- =======================  CTA SECTION  ==================== -->
-    <!-- ========================================================= -->
-    <section class="cta">
-
-        <h2>Ready to Get Started?</h2>
-
-        <p>Call or text anytime:</p>
-        <h3>📞 603-833-0660</h3>
-
-        <p>Email:</p>
-        <h3>📧 focusedtechcoach@gmail.com</h3>
-
-        <a href="mailto:focusedtechcoach@gmail.com" class="btn primary big">
-            Email Me
+      <div class="flex flex-col sm:flex-row gap-4 justify-center">
+        <a href="tel:6038330660"
+          class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg transition-all flex items-center justify-center gap-2">
+          <i data-lucide="phone"></i> Call or Text Me
         </a>
 
-    </section>
+        <a href="mailto:focusedtechcoach@gmail.com"
+          class="border-2 border-green-600 text-green-700 hover:bg-green-50 px-10 py-4 rounded-full text-lg font-semibold shadow-lg transition-all flex items-center justify-center gap-2">
+          <i data-lucide="mail"></i> Email Me
+        </a>
+      </div>
+    </div>
+  </section>
 
 
+  <!-- ========================================================= -->
+  <!-- ======================= SERVICES ========================= -->
+  <!-- ========================================================= -->
+  <section class="py-24 px-6 bg-white">
+    <div class="max-w-6xl mx-auto">
+      <h2 class="text-4xl font-bold text-center mb-12 fade-up">Services I Offer</h2>
 
-    <!-- ========================================================= -->
-    <!-- =======================  FOOTER  ========================= -->
-    <!-- ========================================================= -->
-    <footer>
-        <p>© 2025 Focused Tech Coaching • All Rights Reserved</p>
-        <p><a href="mailto:focusedtechcoach@gmail.com">focusedtechcoach@gmail.com</a></p>
-    </footer>
+      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 fade-up">
+        <!-- Service card -->
+        <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="tv" class="w-8 h-8 text-blue-600"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-3">Streaming Setup</h3>
+          <p class="text-gray-600">Roku, Fire Stick, Apple TV, and app organization.</p>
+        </div>
+
+        <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="scissors" class="w-8 h-8 text-blue-600"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-3">Cable Cutting Help</h3>
+          <p class="text-gray-600">Replace expensive cable with streaming and save money.</p>
+        </div>
+
+        <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="wifi" class="w-8 h-8 text-blue-600"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-3">Wi-Fi Troubleshooting</h3>
+          <p class="text-gray-600">Improve speed, coverage, and router performance.</p>
+        </div>
+
+        <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="home" class="w-8 h-8 text-blue-600"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-3">Smart Home Installation</h3>
+          <p class="text-gray-600">Doorbells, speakers, plugs, lights, and automations.</p>
+        </div>
+
+        <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="smartphone" class="w-8 h-8 text-blue-600"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-3">Tech Training & Support</h3>
+          <p class="text-gray-600">Phones, tablets, computers, and smart TVs.</p>
+        </div>
+
+        <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
+          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
+            <i data-lucide="camera" class="w-8 h-8 text-blue-600"></i>
+          </div>
+          <h3 class="font-bold text-xl mb-3">Security Camera Setup</h3>
+          <p class="text-gray-600">Indoor/outdoor cameras professionally configured.</p>
+        </div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================= -->
+  <!-- ========================= ABOUT ========================== -->
+  <!-- ========================================================= -->
+  <section class="py-24 px-6 bg-gradient-to-br from-gray-50 to-blue-50">
+    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center fade-up">
+
+      <div>
+        <h2 class="text-4xl font-bold mb-6">Meet Your Local Tech Coach</h2>
+        <p class="text-gray-700 text-lg leading-relaxed">
+          Hi, I'm Josh — I help families and homeowners make their technology simple.
+          I come directly to your home, set everything up correctly, and explain things
+          in plain English. My goal is to make tech stress-free and easy for everyone.
+        </p>
+      </div>
+
+      <div class="w-full h-80 rounded-3xl bg-gradient-to-br from-blue-200 to-green-200 shadow-xl flex items-center justify-center">
+        <p class="text-gray-700 font-medium">Your Photo Here</p>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================= -->
+  <!-- ======================= SERVICE AREA ===================== -->
+  <!-- ========================================================= -->
+  <section class="py-24 px-6 bg-gradient-to-br from-green-50 to-blue-50 fade-up">
+    <div class="max-w-6xl mx-auto text-center">
+
+      <h2 class="text-4xl font-bold mb-10">Serving the Seacoast NH & North Shore MA</h2>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-6 max-w-4xl mx-auto">
+        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Hampton</div>
+        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Seabrook</div>
+        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Portsmouth</div>
+        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Exeter</div>
+        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Salisbury</div>
+        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Newburyport</div>
+        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Rowley</div>
+        <div class="bg-white p-6 rounded-2xl shadow text-center"><i data-lucide="map-pin" class="text-green-600 mx-auto mb-2"></i>Amesbury</div>
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================= -->
+  <!-- ========================== CTA =========================== -->
+  <!-- ========================================================= -->
+  <section class="py-24 px-6 bg-gradient-to-br from-blue-600 to-green-600 text-white text-center fade-up">
+    <h2 class="text-4xl md:text-5xl font-bold mb-6">Get Tech You Can Count On — Today.</h2>
+
+    <div class="text-2xl md:text-3xl font-semibold mb-6">
+      📞 Call or Text: <a href="tel:6038330660" class="underline">603-833-0660</a>
+    </div>
+
+    <div class="text-xl md:text-2xl mb-8">
+      📧 Email: <a href="mailto:focusedtechcoach@gmail.com" class="underline">focusedtechcoach@gmail.com</a>
+    </div>
+  </section>
+
+
+  <!-- ========================================================= -->
+  <!-- ========================= FOOTER ========================= -->
+  <!-- ========================================================= -->
+  <footer class="bg-gray-900 text-gray-300 py-10 px-6 text-center fade-up">
+    <div class="mb-4">
+      <a href="mailto:focusedtechcoach@gmail.com" class="hover:text-white">focusedtechcoach@gmail.com</a>
+    </div>
+    <div class="mb-4">
+      <a href="tel:6038330660" class="hover:text-white">603-833-0660</a>
+    </div>
+    <p class="text-gray-500">© 2025 Focused Tech Coaching. All rights reserved.</p>
+  </footer>
+
+  <script>
+    lucide.createIcons();
+  </script>
 
 </body>
 </html>
