@@ -7,13 +7,16 @@
   <title>Focused Tech Coaching – Home Tech Help, WiFi Fixes, Streaming Setup</title>
 
   <!-- ======================= SEO META TAGS ======================= -->
-  <meta name="description" content="Focused Tech Coaching helps families and homeowners with streaming setup, cable cutting, WiFi fixes, smart home installation, camera setup, and device training. Serving Seacoast NH & North Shore MA. Call 603-833-0660." />
-  <meta name="keywords" content="tech help, home tech support, streaming setup, Roku help, WiFi fixes, cable cutting, smart home installation, Hampton NH tech help, Seacoast NH tech support" />
+  <meta name="description"
+    content="Focused Tech Coaching helps families and homeowners with streaming setup, cable cutting, WiFi fixes, smart home installation, camera setup, and device training. Serving Seacoast NH & North Shore MA. Call 603-833-0660." />
+  <meta name="keywords"
+    content="tech help, home tech support, streaming setup, Roku help, WiFi fixes, cable cutting, smart home installation, Hampton NH tech help, Seacoast NH tech support" />
   <meta name="author" content="Focused Tech Coaching" />
 
   <!-- Open Graph (Social Sharing) -->
   <meta property="og:title" content="Focused Tech Coaching – Simple, Stress-Free Tech Help" />
-  <meta property="og:description" content="WiFi fixes, streaming setup, cable cutting, smart home installation, camera setup, and tech training. Call 603-833-0660." />
+  <meta property="og:description"
+    content="WiFi fixes, streaming setup, cable cutting, smart home installation, camera setup, and tech training. Call 603-833-0660." />
   <meta property="og:image" content="https://focusedtechcoach.com/preview.jpg" />
   <meta property="og:type" content="website" />
   <meta property="og:url" content="https://focusedtechcoach.com" />
@@ -38,12 +41,13 @@
   <style>
     body {
       font-family: 'Inter', sans-serif;
+      background-color: #f3f4f6;
     }
 
     .fade-up {
       opacity: 0;
-      transform: translateY(20px);
-      animation: fadeUp 0.8s forwards;
+      transform: translateY(16px);
+      animation: fadeUp 0.7s forwards;
     }
 
     @keyframes fadeUp {
@@ -53,6 +57,11 @@
       }
     }
 
+    .glass-card {
+      background: rgba(255, 255, 255, 0.9);
+      backdrop-filter: blur(10px);
+    }
+
     /* Sticky mobile bar (only on mobile) */
     @media (max-width: 768px) {
       .mobile-sticky-bar {
@@ -60,12 +69,12 @@
         bottom: 0;
         left: 0;
         right: 0;
-        background: #0ea5e9;
+        background: #0284c7;
         color: white;
         display: flex;
         justify-content: space-between;
-        padding: 14px 22px;
-        font-size: 1.2rem;
+        padding: 12px 18px;
+        font-size: 1.05rem;
         font-weight: 600;
         z-index: 9999;
       }
@@ -74,46 +83,158 @@
         color: white;
         display: flex;
         align-items: center;
-        gap: 8px;
+        gap: 6px;
+      }
+
+      body {
+        padding-bottom: 54px;
       }
     }
   </style>
 </head>
 
-<body class="bg-white text-gray-900">
+<body class="text-gray-900">
 
   <!-- ========================================================= -->
-  <!-- ======================= HERO SECTION ===================== -->
+  <!-- ========================= NAVBAR ========================= -->
   <!-- ========================================================= -->
-  <section class="relative min-h-screen flex items-center justify-center bg-gradient-to-br from-blue-50 via-white to-green-50 overflow-hidden">
-    <div class="absolute inset-0 opacity-10"
-      style="background-image:url('data:image/svg+xml,%3Csvg width=\'60\' height=\'60\' viewBox=\'0 0 60 60\' xmlns=\'http://www.w3.org/2000/svg\'%3E%3Cg fill=\'none\' fill-rule=\'evenodd\'%3E%3Cg fill=\'%23000000\' fill-opacity=\'1\'%3E%3Cpath d=\'M36 34v-4h-2v4h-4v2h4v4h2v-4h4v-2h-4zm0-30V0h-2v4h-4v2h4v4h2V6h4V4h-4zM6 34v-4H4v4H0v2h4v4h2v-4h4v-2H6zM6 4V0H4v4H0v2h4v4h2V6h4V4H6z\'/%3E%3C/g%3E%3C/g%3E%3C/svg%3E');">
+  <header class="bg-white shadow-sm">
+    <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
+      <div class="flex items-center gap-2">
+        <div
+          class="w-9 h-9 rounded-xl bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center text-white text-lg font-bold">
+          F
+        </div>
+        <div>
+          <p class="font-semibold text-gray-900 text-sm md:text-base">Focused Tech Coaching</p>
+          <p class="text-xs text-gray-500 hidden sm:block">Simple, stress-free tech help for your home</p>
+        </div>
+      </div>
+
+      <div class="hidden md:flex items-center gap-4 text-sm">
+        <a href="#services" class="text-gray-600 hover:text-blue-600">Services</a>
+        <a href="#pricing" class="text-gray-600 hover:text-blue-600">Pricing</a>
+        <a href="#testimonials" class="text-gray-600 hover:text-blue-600">Reviews</a>
+        <a href="#contact" class="text-gray-600 hover:text-blue-600">Contact</a>
+      </div>
+
+      <a href="tel:6038330660"
+        class="hidden sm:inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-full shadow">
+        <i data-lucide="phone" class="w-4 h-4"></i>
+        603-833-0660
+      </a>
     </div>
+  </header>
 
-    <div class="relative z-10 text-center px-6 max-w-4xl fade-up">
-      <div class="w-28 h-28 mx-auto mb-10 rounded-2xl bg-gradient-to-br from-blue-500 to-green-500 flex items-center justify-center shadow-xl">
-        <span class="text-white text-3xl font-bold">FTC</span>
+
+  <!-- ========================================================= -->
+  <!-- ========================= HERO ========================== -->
+  <!-- ========================================================= -->
+  <section class="bg-gradient-to-br from-blue-50 via-white to-green-50 border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4 py-12 md:py-16 lg:py-18 flex flex-col lg:flex-row items-center gap-10">
+
+      <!-- Left: text -->
+      <div class="flex-1 fade-up">
+        <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 mb-3">
+          Home Tech Support • Seacoast NH & North Shore MA
+        </p>
+
+        <h1 class="text-3xl sm:text-4xl lg:text-5xl font-extrabold leading-tight mb-4">
+          Friendly, Professional Tech Help<br class="hidden md:block" />
+          When You Need It.
+        </h1>
+
+        <p class="text-gray-700 text-base md:text-lg mb-5 max-w-xl">
+          I come to your home, fix your Wi-Fi, set up streaming, install cameras and smart devices, and make sure
+          everything just works — explained in plain English.
+        </p>
+
+        <div class="flex flex-wrap items-center gap-3 mb-6">
+          <a href="tel:6038330660"
+            class="inline-flex items-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-5 py-3 rounded-full text-sm shadow-lg">
+            <i data-lucide="phone" class="w-4 h-4"></i>
+            Call or Text 603-833-0660
+          </a>
+          <a href="mailto:focusedtechcoach@gmail.com"
+            class="inline-flex items-center gap-2 border border-gray-300 hover:border-blue-500 hover:bg-blue-50 text-gray-800 font-medium px-5 py-3 rounded-full text-sm">
+            <i data-lucide="mail" class="w-4 h-4"></i>
+            Email Me
+          </a>
+        </div>
+
+        <div class="flex flex-wrap gap-3 text-xs text-gray-600">
+          <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white shadow-sm border border-gray-100">
+            <i data-lucide="tv" class="w-3 h-3 text-blue-600"></i>
+            Streaming & Cable Cutting
+          </span>
+          <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white shadow-sm border border-gray-100">
+            <i data-lucide="wifi" class="w-3 h-3 text-blue-600"></i>
+            Wi-Fi Fixes
+          </span>
+          <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white shadow-sm border border-gray-100">
+            <i data-lucide="home" class="w-3 h-3 text-blue-600"></i>
+            Smart Home & Cameras
+          </span>
+          <span class="inline-flex items-center gap-1 px-3 py-1 rounded-full bg-white shadow-sm border border-gray-100">
+            <i data-lucide="user" class="w-3 h-3 text-blue-600"></i>
+            Patient 1-on-1 Training
+          </span>
+        </div>
       </div>
 
-      <h1 class="text-5xl md:text-6xl font-bold mb-6 leading-tight">
-        Simple, Stress-Free Tech Help<br>for Your Home.
-      </h1>
+      <!-- Right: card like MyTechCoach hero -->
+      <div class="flex-1 max-w-md w-full fade-up">
+        <div class="glass-card rounded-3xl shadow-xl border border-blue-100 px-6 py-6 md:px-8 md:py-8">
+          <div class="flex items-center gap-3 mb-4">
+            <div class="w-10 h-10 rounded-2xl bg-blue-600 flex items-center justify-center text-white">
+              <i data-lucide="monitor-smartphone" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="text-xs uppercase tracking-wide text-gray-500">Your Local Tech Coach</p>
+              <p class="font-semibold text-gray-900 text-sm">In-Home Tech Support & Setup</p>
+            </div>
+          </div>
 
-      <p class="text-gray-700 text-lg md:text-xl mb-10 max-w-2xl mx-auto">
-        Streaming setup • Cable cutting • Wi-Fi fixes • Smart home • Cameras • Device training
-      </p>
+          <p class="text-sm text-gray-600 mb-4">
+            Need help with TVs, Wi-Fi, streaming, smart home, or devices? I make house calls and remote sessions so your
+            tech feels easy again.
+          </p>
 
-      <div class="flex flex-col sm:flex-row gap-4 justify-center">
-        <a href="tel:6038330660"
-          class="bg-blue-600 hover:bg-blue-700 text-white px-10 py-4 rounded-full text-lg font-semibold shadow-lg transition-all flex items-center justify-center gap-2">
-          <i data-lucide="phone"></i> Call or Text Me
-        </a>
+          <div class="space-y-3 text-sm text-gray-700 mb-5">
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i>
+              <span>Most visits completed in one session</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i>
+              <span>Clear, upfront pricing – no surprises</span>
+            </div>
+            <div class="flex items-center gap-2">
+              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i>
+              <span>Patient, friendly support – no jargon</span>
+            </div>
+          </div>
 
-        <a href="mailto:focusedtechcoach@gmail.com"
-          class="border-2 border-green-600 text-green-700 hover:bg-green-50 px-10 py-4 rounded-full text-lg font-semibold shadow-lg transition-all flex items-center justify-center gap-2">
-          <i data-lucide="mail"></i> Email Me
-        </a>
+          <div class="border-t border-gray-200 pt-4">
+            <p class="text-xs font-semibold uppercase text-gray-500 mb-1">Call or Text Anytime</p>
+            <p class="text-lg font-bold text-gray-900 mb-3">603-833-0660</p>
+
+            <div class="flex flex-wrap gap-2">
+              <a href="tel:6038330660"
+                class="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-semibold">
+                <i data-lucide="phone-call" class="w-4 h-4"></i>
+                Call Now
+              </a>
+              <a href="sms:6038330660"
+                class="flex-1 inline-flex items-center justify-center gap-2 border border-gray-300 hover:border-blue-500 hover:bg-blue-50 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold">
+                <i data-lucide="message-circle" class="w-4 h-4"></i>
+                Text Me
+              </a>
+            </div>
+          </div>
+        </div>
       </div>
+
     </div>
   </section>
 
@@ -121,88 +242,156 @@
   <!-- ========================================================= -->
   <!-- ======================= SERVICES ========================= -->
   <!-- ========================================================= -->
-  <section class="py-24 px-6 bg-white">
-    <div class="max-w-6xl mx-auto">
-      <h2 class="text-4xl font-bold text-center mb-12 fade-up">Services I Offer</h2>
+  <section id="services" class="py-14 md:py-16 bg-gray-50 border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10 fade-up">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-blue-600 mb-2">How I Can Help</p>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">Home Tech Services</h2>
+        <p class="text-gray-600 max-w-2xl mx-auto text-sm md:text-base">
+          Whether it's your TV, router, streaming apps, smart home devices, or security cameras, I handle everything so
+          your tech works the way you want it to.
+        </p>
+      </div>
 
-      <div class="grid md:grid-cols-2 lg:grid-cols-3 gap-8 fade-up">
-
+      <div class="grid md:grid-cols-3 gap-6 fade-up">
         <!-- Streaming -->
-        <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
-          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-            <i data-lucide="tv" class="w-8 h-8 text-blue-600"></i>
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div
+            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
+            <i data-lucide="tv" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-bold text-xl mb-3">Streaming Setup</h3>
-          <p class="text-gray-600">Roku, Fire Stick, Apple TV, and app organization.</p>
+          <h3 class="font-semibold text-lg mb-2">Streaming & TV Setup</h3>
+          <p class="text-sm text-gray-600">
+            Smart TVs, Roku, Fire Stick, Apple TV, soundbars, and organizing your apps so everyone can find what they
+            need.
+          </p>
         </div>
 
         <!-- Cable Cutting -->
-        <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
-          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-            <i data-lucide="scissors" class="w-8 h-8 text-blue-600"></i>
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div
+            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
+            <i data-lucide="scissors" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-bold text-xl mb-3">Cable Cutting Help</h3>
-          <p class="text-gray-600">Replace expensive cable with streaming and save money.</p>
+          <h3 class="font-semibold text-lg mb-2">Cable Cutting & Savings</h3>
+          <p class="text-sm text-gray-600">
+            Help you move from cable to streaming, choose the right services, and save money each month.
+          </p>
         </div>
 
         <!-- WiFi -->
-        <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
-          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-            <i data-lucide="wifi" class="w-8 h-8 text-blue-600"></i>
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div
+            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
+            <i data-lucide="wifi" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-bold text-xl mb-3">Wi-Fi Troubleshooting</h3>
-          <p class="text-gray-600">Improve speed, coverage, and router performance.</p>
+          <h3 class="font-semibold text-lg mb-2">Wi-Fi Fixes & Upgrades</h3>
+          <p class="text-sm text-gray-600">
+            Improve speed and coverage, configure mesh systems, and solve “dead spot” issues around your home.
+          </p>
         </div>
 
         <!-- Smart Home -->
-        <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
-          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-            <i data-lucide="home" class="w-8 h-8 text-blue-600"></i>
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div
+            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
+            <i data-lucide="home" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-bold text-xl mb-3">Smart Home Installation</h3>
-          <p class="text-gray-600">Doorbells, speakers, plugs, lights, and automations.</p>
+          <h3 class="font-semibold text-lg mb-2">Smart Home & Voice Assistants</h3>
+          <p class="text-sm text-gray-600">
+            Doorbells, smart plugs, lights, speakers, Alexa/Google setup, and simple automations tailored to you.
+          </p>
         </div>
 
-        <!-- Tech Support -->
-        <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
-          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-            <i data-lucide="smartphone" class="w-8 h-8 text-blue-600"></i>
+        <!-- Devices -->
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div
+            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
+            <i data-lucide="smartphone" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-bold text-xl mb-3">Tech Training & Support</h3>
-          <p class="text-gray-600">Phones, tablets, computers, and smart TVs.</p>
+          <h3 class="font-semibold text-lg mb-2">Device Help & Training</h3>
+          <p class="text-sm text-gray-600">
+            Phones, tablets, laptops, backups, password managers, and patient 1-on-1 lessons at your pace.
+          </p>
         </div>
 
         <!-- Cameras -->
-        <div class="border rounded-2xl p-8 hover:shadow-xl transition-all">
-          <div class="w-16 h-16 bg-blue-100 rounded-xl flex items-center justify-center mb-6">
-            <i data-lucide="camera" class="w-8 h-8 text-blue-600"></i>
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div
+            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
+            <i data-lucide="camera" class="w-5 h-5"></i>
           </div>
-          <h3 class="font-bold text-xl mb-3">Security Camera Setup</h3>
-          <p class="text-gray-600">Indoor/outdoor cameras professionally configured.</p>
+          <h3 class="font-semibold text-lg mb-2">Security Cameras</h3>
+          <p class="text-sm text-gray-600">
+            Indoor/outdoor cameras, placement advice, app setup, and alerts so you feel confident when you're away.
+          </p>
         </div>
-
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================= -->
-  <!-- ======================= ABOUT =========================== -->
+  <!-- =================== WHY CHOOSE SECTION ================== -->
   <!-- ========================================================= -->
-  <section class="py-24 px-6 bg-gradient-to-br from-gray-50 to-blue-50">
-    <div class="max-w-6xl mx-auto grid md:grid-cols-2 gap-12 items-center fade-up">
+  <section class="py-14 md:py-16 bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="grid md:grid-cols-2 gap-8 items-center fade-up">
+        <div>
+          <p class="text-xs font-semibold tracking-[0.2em] uppercase text-blue-600 mb-2">
+            Why Homeowners Call Me
+          </p>
+          <h2 class="text-2xl md:text-3xl font-bold mb-4">Not Just Tech Support — A Personal Tech Coach.</h2>
+          <p class="text-sm md:text-base text-gray-600 mb-4">
+            My goal is to make technology feel calm, clear, and under control. I take the time to understand how your
+            family uses devices, then set everything up so it works the same way for everyone.
+          </p>
+          <p class="text-sm md:text-base text-gray-600">
+            You’ll get a trusted local contact you can call when something breaks, when you buy new devices, or when you
+            just want an honest opinion before you spend money.
+          </p>
+        </div>
 
-      <div>
-        <h2 class="text-4xl font-bold mb-6">Meet Your Local Tech Coach</h2>
-        <p class="text-gray-700 text-lg leading-relaxed">
-          Hi, I'm Josh — I help families and homeowners make their technology simple.
-          I come directly to your home, set everything up correctly, and explain things
-          in plain English. My goal is to make tech stress-free and easy for everyone.
-        </p>
-      </div>
+        <div class="grid sm:grid-cols-2 gap-4">
+          <div class="glass-card rounded-2xl p-5 shadow-sm border border-gray-100">
+            <div
+              class="w-9 h-9 rounded-xl bg-green-100 text-green-600 flex items-center justify-center mb-3">
+              <i data-lucide="heart-handshake" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-semibold text-sm mb-1">Patient & Friendly</h3>
+            <p class="text-xs text-gray-600">I never rush, and I’m happy to explain things twice (or more) without
+              judgement.</p>
+          </div>
 
-      <div class="w-full h-80 rounded-3xl bg-gradient-to-br from-blue-200 to-green-200 shadow-xl flex items-center justify-center">
-        <p class="text-gray-700 font-medium">Your Photo Here</p>
+          <div class="glass-card rounded-2xl p-5 shadow-sm border border-gray-100">
+            <div
+              class="w-9 h-9 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-3">
+              <i data-lucide="shield-check" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-semibold text-sm mb-1">Trusted in the Community</h3>
+            <p class="text-xs text-gray-600">Local to the Seacoast area — a real person you can call, not a call center.
+            </p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 shadow-sm border border-gray-100">
+            <div
+              class="w-9 h-9 rounded-xl bg-yellow-100 text-yellow-600 flex items-center justify-center mb-3">
+              <i data-lucide="badge-dollar-sign" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-semibold text-sm mb-1">Clear Pricing</h3>
+            <p class="text-xs text-gray-600">You’ll know what a visit costs before I arrive. No surprise fees.</p>
+          </div>
+
+          <div class="glass-card rounded-2xl p-5 shadow-sm border border-gray-100">
+            <div
+              class="w-9 h-9 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-3">
+              <i data-lucide="lightbulb" class="w-5 h-5"></i>
+            </div>
+            <h3 class="font-semibold text-sm mb-1">Education Included</h3>
+            <p class="text-xs text-gray-600">I leave you with tips, simple notes, or checklists so you feel confident
+              using your tech.</p>
+          </div>
+        </div>
       </div>
     </div>
   </section>
@@ -211,66 +400,226 @@
   <!-- ========================================================= -->
   <!-- ======================= PRICING ========================== -->
   <!-- ========================================================= -->
-  <section class="py-24 px-6 bg-white fade-up">
-    <div class="max-w-6xl mx-auto">
+  <section id="pricing" class="py-14 md:py-16 bg-gray-50 border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10 fade-up">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-blue-600 mb-2">
+          Simple, Transparent Pricing
+        </p>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">Home Tech Visit Options</h2>
+        <p class="text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
+          Most visits fall into one of these options. If you’re not sure what you need, just call or text and I’ll help
+          you pick the best fit.
+        </p>
+      </div>
 
-      <h2 class="text-4xl md:text-5xl font-bold text-center mb-12">Pricing</h2>
-
-      <div class="grid md:grid-cols-3 gap-8">
-
+      <div class="grid md:grid-cols-3 gap-6 fade-up">
         <!-- Basic -->
-        <div class="border rounded-2xl p-10 shadow hover:shadow-2xl transition">
-          <h3 class="text-2xl font-bold mb-4">Basic Visit</h3>
-          <p class="text-gray-600 mb-4">Quick fixes & minor help</p>
-          <p class="text-4xl font-extrabold mb-6">$50</p>
-          <ul class="text-gray-600 space-y-2 mb-6">
-            <li>• Simple questions</li>
-            <li>• Device troubleshooting</li>
-            <li>• Remote or in-person</li>
+        <div class="glass-card rounded-2xl p-7 shadow-sm border border-gray-100 flex flex-col">
+          <p class="text-xs font-semibold uppercase text-gray-500 mb-1">Quick Fix</p>
+          <h3 class="text-lg font-bold mb-1">Basic Visit</h3>
+          <p class="text-sm text-gray-600 mb-4">Small issues or a couple of questions.</p>
+          <p class="text-3xl font-extrabold mb-1">$50</p>
+          <p class="text-xs text-gray-500 mb-4">Starting from</p>
+          <ul class="text-sm text-gray-600 space-y-1 mb-4">
+            <li>• Simple troubleshooting</li>
+            <li>• App or device help</li>
+            <li>• Remote or in-person (when available)</li>
           </ul>
+          <div class="mt-auto">
+            <a href="tel:6038330660"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700">
+              <i data-lucide="phone" class="w-4 h-4"></i> Ask if this fits your issue
+            </a>
+          </div>
         </div>
 
-        <!-- Standard -->
-        <div class="border rounded-2xl p-10 shadow-lg hover:shadow-2xl transition bg-blue-50">
-          <h3 class="text-2xl font-bold mb-4">Standard Visit</h3>
-          <p class="text-gray-600 mb-4">Most popular choice</p>
-          <p class="text-4xl font-extrabold mb-6">$99</p>
-          <ul class="text-gray-600 space-y-2 mb-6">
-            <li>• Streaming setup</li>
-            <li>• WiFi optimization</li>
-            <li>• Smart home integration</li>
+        <!-- Standard (highlight) -->
+        <div
+          class="glass-card rounded-2xl p-7 shadow-md border border-blue-200 bg-gradient-to-b from-white via-white to-blue-50 flex flex-col">
+          <p class="text-xs font-semibold uppercase text-blue-600 mb-1">Most Popular</p>
+          <h3 class="text-lg font-bold mb-1">Standard Home Visit</h3>
+          <p class="text-sm text-gray-600 mb-4">Perfect for streaming, Wi-Fi, and smart home projects.</p>
+          <p class="text-3xl font-extrabold mb-1">$99</p>
+          <p class="text-xs text-gray-500 mb-4">Typical home visit</p>
+          <ul class="text-sm text-gray-600 space-y-1 mb-4">
+            <li>• TV & streaming setup</li>
+            <li>• Wi-Fi optimization</li>
+            <li>• Basic smart home or camera setup</li>
+            <li>• Time for questions & training</li>
           </ul>
+          <div class="mt-auto">
+            <a href="tel:6038330660"
+              class="inline-flex items-center justify-center w-full gap-2 bg-blue-600 hover:bg-blue-700 text-white text-sm font-semibold px-4 py-2 rounded-full">
+              <i data-lucide="phone-call" class="w-4 h-4"></i>
+              Call to Check Availability
+            </a>
+          </div>
         </div>
 
         <!-- Premium -->
-        <div class="border rounded-2xl p-10 shadow hover:shadow-2xl transition">
-          <h3 class="text-2xl font-bold mb-4">Premium Visit</h3>
-          <p class="text-gray-600 mb-4">Full home tech refresh</p>
-          <p class="text-4xl font-extrabold mb-6">$150</p>
-          <ul class="text-gray-600 space-y-2 mb-6">
-            <li>• Whole-home WiFi fix</li>
-            <li>• Complete TV setup</li>
-            <li>• Smart home automation</li>
+        <div class="glass-card rounded-2xl p-7 shadow-sm border border-gray-100 flex flex-col">
+          <p class="text-xs font-semibold uppercase text-gray-500 mb-1">Whole-Home Project</p>
+          <h3 class="text-lg font-bold mb-1">Premium Visit</h3>
+          <p class="text-sm text-gray-600 mb-4">Larger projects or full tech refresh.</p>
+          <p class="text-3xl font-extrabold mb-1">$150+</p>
+          <p class="text-xs text-gray-500 mb-4">Custom quote</p>
+          <ul class="text-sm text-gray-600 space-y-1 mb-4">
+            <li>• Multiple rooms / devices</li>
+            <li>• Whole-home Wi-Fi & streaming</li>
+            <li>• Advanced smart home or cameras</li>
+            <li>• Follow-up support options</li>
           </ul>
+          <div class="mt-auto">
+            <a href="mailto:focusedtechcoach@gmail.com"
+              class="inline-flex items-center gap-2 text-sm font-semibold text-blue-600 hover:text-blue-700">
+              <i data-lucide="mail" class="w-4 h-4"></i> Email for a custom estimate
+            </a>
+          </div>
         </div>
-
       </div>
     </div>
   </section>
 
 
   <!-- ========================================================= -->
-  <!-- ========================== CTA =========================== -->
+  <!-- ==================== TESTIMONIALS ======================= -->
   <!-- ========================================================= -->
-  <section class="py-24 px-6 bg-gradient-to-br from-blue-600 to-green-600 text-white text-center fade-up">
-    <h2 class="text-4xl md:text-5xl font-bold mb-6">Get Tech You Can Count On — Today.</h2>
+  <section id="testimonials" class="py-14 md:py-16 bg-white border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-10 fade-up">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-blue-600 mb-2">
+          Happy Customers
+        </p>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">What People Say</h2>
+        <p class="text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
+          Real feedback from homeowners who wanted simple, reliable tech help without the stress.
+        </p>
+      </div>
 
-    <div class="text-2xl md:text-3xl font-semibold mb-6">
-      📞 Call or Text: <a href="tel:6038330660" class="underline">603-833-0660</a>
+      <div class="grid md:grid-cols-3 gap-6 fade-up">
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+              <i data-lucide="user" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-sm">S. from Hampton</p>
+              <p class="text-xs text-gray-500">Streaming & Wi-Fi</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-700">
+            “Josh organized all our streaming apps, fixed our Wi-Fi dead spots, and made it easy enough that my parents
+            can use it without getting frustrated.”
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+              <i data-lucide="user" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-sm">M. from Seabrook</p>
+              <p class="text-xs text-gray-500">Smart Home & Cameras</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-700">
+            “He set up our cameras and smart doorbell, showed us how the app works, and even labeled things so we
+            wouldn’t forget.”
+          </p>
+        </div>
+
+        <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
+          <div class="flex items-center gap-3 mb-3">
+            <div class="w-10 h-10 rounded-full bg-blue-100 flex items-center justify-center text-blue-600">
+              <i data-lucide="user" class="w-5 h-5"></i>
+            </div>
+            <div>
+              <p class="font-semibold text-sm">J. from Exeter</p>
+              <p class="text-xs text-gray-500">Device Coaching</p>
+            </div>
+          </div>
+          <p class="text-sm text-gray-700">
+            “Josh is patient, kind, and never makes you feel silly for asking basic questions. I finally feel comfortable
+            using my phone and tablet.”
+          </p>
+        </div>
+      </div>
     </div>
+  </section>
 
-    <div class="text-xl md:text-2xl mb-8">
-      📧 Email: <a href="mailto:focusedtechcoach@gmail.com" class="underline">focusedtechcoach@gmail.com</a>
+
+  <!-- ========================================================= -->
+  <!-- ==================== SERVICE AREA ======================== -->
+  <!-- ========================================================= -->
+  <section class="py-14 md:py-16 bg-gray-50 border-b border-gray-200">
+    <div class="max-w-6xl mx-auto px-4">
+      <div class="text-center mb-8 fade-up">
+        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-blue-600 mb-2">
+          Where I Work
+        </p>
+        <h2 class="text-2xl md:text-3xl font-bold mb-3">Serving the Seacoast & North Shore</h2>
+        <p class="text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
+          In-home visits are available across the Seacoast NH area and nearby Massachusetts towns. Remote sessions are
+          available from anywhere.
+        </p>
+      </div>
+
+      <div class="grid sm:grid-cols-2 md:grid-cols-4 gap-4 fade-up">
+        {[
+          "Hampton",
+          "Seabrook",
+          "Portsmouth",
+          "Exeter",
+          "Salisbury",
+          "Newburyport",
+          "Rowley",
+          "Amesbury"
+        ].map((area, index) => `
+        <div class="glass-card rounded-xl p-4 text-center shadow-sm border border-gray-100">
+          <div class="flex items-center justify-center gap-2 text-sm font-semibold text-gray-800">
+            <i data-lucide="map-pin" class="w-4 h-4 text-blue-600"></i>
+            <span>${area}</span>
+          </div>
+        </div>`).join("")}
+      </div>
+    </div>
+  </section>
+
+
+  <!-- ========================================================= -->
+  <!-- ========================= CTA ============================ -->
+  <!-- ========================================================= -->
+  <section id="contact" class="py-14 md:py-16 bg-white">
+    <div class="max-w-4xl mx-auto px-4 text-center fade-up">
+      <p class="text-xs font-semibold tracking-[0.2em] uppercase text-blue-600 mb-2">
+        Ready to Get Started?
+      </p>
+      <h2 class="text-2xl md:text-3xl font-bold mb-4">
+        Let’s Get Your Home Tech Running Smoothly.
+      </h2>
+      <p class="text-gray-600 text-sm md:text-base max-w-2xl mx-auto mb-6">
+        Call, text, or email and tell me briefly what you’re dealing with. I’ll let you know the best visit option and
+        when I can come out.
+      </p>
+
+      <div class="flex flex-col sm:flex-row justify-center gap-3 mb-4">
+        <a href="tel:6038330660"
+          class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full text-sm shadow-lg">
+          <i data-lucide="phone-call" class="w-4 h-4"></i>
+          Call or Text 603-833-0660
+        </a>
+        <a href="mailto:focusedtechcoach@gmail.com"
+          class="inline-flex items-center justify-center gap-2 border border-gray-300 hover:border-blue-500 hover:bg-blue-50 text-gray-800 font-semibold px-6 py-3 rounded-full text-sm">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          Email focusedtechcoach@gmail.com
+        </a>
+      </div>
+
+      <p class="text-xs text-gray-500">
+        No pressure, no hard sales — just honest help and clear options.
+      </p>
     </div>
   </section>
 
@@ -278,14 +627,20 @@
   <!-- ========================================================= -->
   <!-- ========================= FOOTER ========================= -->
   <!-- ========================================================= -->
-  <footer class="bg-gray-900 text-gray-300 py-10 px-6 text-center fade-up">
-    <div class="mb-4">
-      <a href="mailto:focusedtechcoach@gmail.com" class="hover:text-white">focusedtechcoach@gmail.com</a>
+  <footer class="bg-gray-900 text-gray-300 py-6 px-4">
+    <div class="max-w-6xl mx-auto flex flex-col sm:flex-row items-center justify-between gap-3 text-sm">
+      <p>© 2025 Focused Tech Coaching. All rights reserved.</p>
+      <div class="flex items-center gap-5">
+        <a href="mailto:focusedtechcoach@gmail.com" class="flex items-center gap-1 hover:text-white">
+          <i data-lucide="mail" class="w-4 h-4"></i>
+          focusedtechcoach@gmail.com
+        </a>
+        <a href="tel:6038330660" class="flex items-center gap-1 hover:text-white">
+          <i data-lucide="phone" class="w-4 h-4"></i>
+          603-833-0660
+        </a>
+      </div>
     </div>
-    <div class="mb-4">
-      <a href="tel:6038330660" class="hover:text-white">603-833-0660</a>
-    </div>
-    <p class="text-gray-500">© 2025 Focused Tech Coaching. All rights reserved.</p>
   </footer>
 
   <!-- Mobile Sticky Bar -->
@@ -295,8 +650,37 @@
   </div>
 
   <script>
+    // Render Lucide icons
     lucide.createIcons();
+
+    // quick hack to render the service area chip list that was built as a template string
+    // (because Tailwind is fine with static HTML)
+    const areaSection = document.querySelector(
+      'section.py-14.md\\:py-16.bg-gray-50.border-b.border-gray-200 div.grid'
+    );
+    if (areaSection && areaSection.innerHTML.includes('{[')) {
+      const areas = [
+        "Hampton",
+        "Seabrook",
+        "Portsmouth",
+        "Exeter",
+        "Salisbury",
+        "Newburyport",
+        "Rowley",
+        "Amesbury"
+      ];
+      areaSection.innerHTML = areas.map(area => `
+        <div class="glass-card rounded-xl p-4 text-center shadow-sm border border-gray-100">
+          <div class="flex items-center justify-center gap-2 text-sm font-semibold text-gray-800">
+            <i data-lucide="map-pin" class="w-4 h-4 text-blue-600"></i>
+            <span>${area}</span>
+          </div>
+        </div>
+      `).join("");
+      lucide.createIcons();
+    }
   </script>
 
 </body>
+
 </html>
