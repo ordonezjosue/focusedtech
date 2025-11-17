@@ -62,7 +62,7 @@
       backdrop-filter: blur(10px);
     }
 
-    /* Sticky mobile bar (only on mobile) */
+    /* Sticky mobile bar */
     @media (max-width: 768px) {
       .mobile-sticky-bar {
         position: fixed;
@@ -95,9 +95,7 @@
 
 <body class="text-gray-900">
 
-  <!-- ========================================================= -->
   <!-- ========================= NAVBAR ========================= -->
-  <!-- ========================================================= -->
   <header class="bg-white shadow-sm">
     <div class="max-w-6xl mx-auto px-4 py-3 flex items-center justify-between">
       <div class="flex items-center gap-2">
@@ -126,14 +124,11 @@
     </div>
   </header>
 
-
-  <!-- ========================================================= -->
   <!-- ========================= HERO ========================== -->
-  <!-- ========================================================= -->
   <section class="bg-gradient-to-br from-blue-50 via-white to-green-50 border-b border-gray-200">
     <div class="max-w-6xl mx-auto px-4 py-12 md:py-16 lg:py-18 flex flex-col lg:flex-row items-center gap-10">
 
-      <!-- Left: text -->
+      <!-- LEFT SIDE REMAINS THE SAME -->
       <div class="flex-1 fade-up">
         <p class="text-sm font-semibold uppercase tracking-[0.18em] text-blue-600 mb-3">
           Home Tech Support • Seacoast NH & North Shore MA
@@ -182,63 +177,90 @@
         </div>
       </div>
 
-      <!-- Right: card -->
+      <!-- ========================= NEW FORM (REPLACES OLD CARD) ========================= -->
       <div class="flex-1 max-w-md w-full fade-up">
-        <div class="glass-card rounded-3xl shadow-xl border border-blue-100 px-6 py-6 md:px-8 md:py-8">
+        <div class="glass-card rounded-3xl shadow-xl border border-blue-100 p-7">
+
           <div class="flex items-center gap-3 mb-4">
             <div class="w-10 h-10 rounded-2xl bg-blue-600 flex items-center justify-center text-white">
-              <i data-lucide="monitor-smartphone" class="w-5 h-5"></i>
+              <i data-lucide="clipboard-list" class="w-5 h-5"></i>
             </div>
             <div>
-              <p class="text-xs uppercase tracking-wide text-gray-500">Your Local Tech Coach</p>
-              <p class="font-semibold text-gray-900 text-sm">In-Home Tech Support & Setup</p>
+              <p class="text-xs uppercase tracking-wide text-gray-500">Request Tech Help or Appointment</p>
+              <p class="font-semibold text-gray-900 text-sm">Fast Response • Text Notification</p>
             </div>
           </div>
 
-          <p class="text-sm text-gray-600 mb-4">
-            Need help with TVs, Wi-Fi, streaming, smart home, or devices? I make house calls and remote sessions so your
-            tech feels easy again.
-          </p>
+          <form id="leadForm" class="space-y-4">
+            <div>
+              <label class="text-sm font-medium">Name</label>
+              <input id="name" type="text" required
+                class="w-full mt-1 rounded-xl border p-2 text-sm focus:ring-2 focus:ring-blue-500" />
+            </div>
 
-          <div class="space-y-3 text-sm text-gray-700 mb-5">
-            <div class="flex items-center gap-2">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i>
-              <span>Most visits completed in one session</span>
+            <div>
+              <label class="text-sm font-medium">Email</label>
+              <input id="email" type="email" required
+                class="w-full mt-1 rounded-xl border p-2 text-sm focus:ring-2 focus:ring-blue-500" />
             </div>
-            <div class="flex items-center gap-2">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i>
-              <span>Clear, upfront pricing – no surprises</span>
-            </div>
-            <div class="flex items-center gap-2">
-              <i data-lucide="check-circle-2" class="w-4 h-4 text-green-600"></i>
-              <span>Patient, friendly support – no jargon</span>
-            </div>
-          </div>
 
-          <div class="border-t border-gray-200 pt-4">
-            <p class="text-xs font-semibold uppercase text-gray-500 mb-1">Call or Text Anytime</p>
-            <p class="text-lg font-bold text-gray-900 mb-3">603-833-0660</p>
-
-            <div class="flex flex-wrap gap-2">
-              <a href="tel:6038330660"
-                class="flex-1 inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white px-4 py-2 rounded-full text-sm font-semibold">
-                <i data-lucide="phone-call" class="w-4 h-4"></i>
-                Call Now
-              </a>
-              <a href="sms:6038330660"
-                class="flex-1 inline-flex items-center justify-center gap-2 border border-gray-300 hover:border-blue-500 hover:bg-blue-50 text-gray-800 px-4 py-2 rounded-full text-sm font-semibold">
-                <i data-lucide="message-circle" class="w-4 h-4"></i>
-                Text Me
-              </a>
+            <div>
+              <label class="text-sm font-medium">Phone</label>
+              <input id="phone" type="text" required
+                class="w-full mt-1 rounded-xl border p-2 text-sm focus:ring-2 focus:ring-blue-500" />
             </div>
-          </div>
+
+            <div>
+              <label class="text-sm font-medium">Address (optional)</label>
+              <input id="address" type="text"
+                class="w-full mt-1 rounded-xl border p-2 text-sm focus:ring-2 focus:ring-blue-500" />
+            </div>
+
+            <div>
+              <label class="text-sm font-medium">What do you need help with?</label>
+
+              <div class="space-y-2 mt-2 text-sm">
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="service" value="Wi-Fi / Internet Issues" required />
+                  Wi-Fi / Internet Issues
+                </label>
+
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="service" value="Streaming / Cable Cutting" />
+                  Streaming / Cable Cutting
+                </label>
+
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="service" value="Smart Home & Cameras" />
+                  Smart Home & Cameras
+                </label>
+
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="service" value="Device Help or General Tech Support" />
+                  Device Help / General Tech Support
+                </label>
+
+                <label class="flex items-center gap-2">
+                  <input type="radio" name="service" value="Combination: Cable Cutting + Streaming Setup" />
+                  Combo: Cable Cutting + Streaming Setup
+                </label>
+              </div>
+            </div>
+
+            <button type="submit"
+              class="w-full bg-blue-600 hover:bg-blue-700 text-white font-semibold py-3 rounded-xl shadow">
+              Submit Request
+            </button>
+
+            <p id="formStatus" class="text-sm text-center mt-2"></p>
+          </form>
+
         </div>
       </div>
-
     </div>
   </section>
 
-
+  <!-- ========== REST OF THE PAGE (unchanged) ========== -->
   <!-- ========================================================= -->
   <!-- ======================= SERVICES ========================= -->
   <!-- ========================================================= -->
@@ -256,8 +278,7 @@
       <div class="grid md:grid-cols-3 gap-6 fade-up">
         <!-- Streaming -->
         <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div
-            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
             <i data-lucide="tv" class="w-5 h-5"></i>
           </div>
           <h3 class="font-semibold text-lg mb-2">Streaming & TV Setup</h3>
@@ -269,8 +290,7 @@
 
         <!-- Cable Cutting -->
         <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div
-            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
             <i data-lucide="scissors" class="w-5 h-5"></i>
           </div>
           <h3 class="font-semibold text-lg mb-2">Cable Cutting & Savings</h3>
@@ -281,8 +301,7 @@
 
         <!-- WiFi -->
         <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div
-            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
             <i data-lucide="wifi" class="w-5 h-5"></i>
           </div>
           <h3 class="font-semibold text-lg mb-2">Wi-Fi Fixes & Upgrades</h3>
@@ -293,8 +312,7 @@
 
         <!-- Smart Home -->
         <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div
-            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
             <i data-lucide="home" class="w-5 h-5"></i>
           </div>
           <h3 class="font-semibold text-lg mb-2">Smart Home & Voice Assistants</h3>
@@ -305,8 +323,7 @@
 
         <!-- Devices -->
         <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div
-            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
             <i data-lucide="smartphone" class="w-5 h-5"></i>
           </div>
           <h3 class="font-semibold text-lg mb-2">Device Help & Training</h3>
@@ -317,8 +334,7 @@
 
         <!-- Cameras -->
         <div class="glass-card rounded-2xl p-6 shadow-sm border border-gray-100">
-          <div
-            class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
+          <div class="w-10 h-10 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-4 shadow-sm">
             <i data-lucide="camera" class="w-5 h-5"></i>
           </div>
           <h3 class="font-semibold text-lg mb-2">Security Cameras</h3>
@@ -329,73 +345,6 @@
       </div>
     </div>
   </section>
-
-
-  <!-- ========================================================= -->
-  <!-- =================== WHY CHOOSE SECTION ================== -->
-  <!-- ========================================================= -->
-  <section class="py-14 md:py-16 bg-white border-b border-gray-200">
-    <div class="max-w-6xl mx-auto px-4">
-      <div class="grid md:grid-cols-2 gap-8 items-center fade-up">
-        <div>
-          <p class="text-xs font-semibold tracking-[0.2em] uppercase text-blue-600 mb-2">
-            Why Homeowners Call Me
-          </p>
-          <h2 class="text-2xl md:text-3xl font-bold mb-4">Not Just Tech Support — A Personal Tech Coach.</h2>
-          <p class="text-sm md:text-base text-gray-600 mb-4">
-            My goal is to make technology feel calm, clear, and under control. I take the time to understand how your
-            family uses devices, then set everything up so it works the same way for everyone.
-          </p>
-          <p class="text-sm md:text-base text-gray-600">
-            You’ll get a trusted local contact you can call when something breaks, when you buy new devices, or when you
-            just want an honest opinion before you spend money.
-          </p>
-        </div>
-
-        <div class="grid sm:grid-cols-2 gap-4">
-          <div class="glass-card rounded-2xl p-5 shadow-sm border border-gray-100">
-            <div
-              class="w-9 h-9 rounded-xl bg-green-100 text-green-600 flex items-center justify-center mb-3">
-              <i data-lucide="heart-handshake" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-semibold text-sm mb-1">Patient & Friendly</h3>
-            <p class="text-xs text-gray-600">I never rush, and I’m happy to explain things twice (or more) without
-              judgement.</p>
-          </div>
-
-          <div class="glass-card rounded-2xl p-5 shadow-sm border border-gray-100">
-            <div
-              class="w-9 h-9 rounded-xl bg-blue-100 text-blue-600 flex items-center justify-center mb-3">
-              <i data-lucide="shield-check" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-semibold text-sm mb-1">Trusted in the Community</h3>
-            <p class="text-xs text-gray-600">Local to the Seacoast area — a real person you can call, not a call center.
-            </p>
-          </div>
-
-          <div class="glass-card rounded-2xl p-5 shadow-sm border border-gray-100">
-            <div
-              class="w-9 h-9 rounded-xl bg-yellow-100 text-yellow-600 flex items-center justify-center mb-3">
-              <i data-lucide="badge-dollar-sign" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-semibold text-sm mb-1">Clear Pricing</h3>
-            <p class="text-xs text-gray-600">You’ll know what a visit costs before I arrive. No surprise fees.</p>
-          </div>
-
-          <div class="glass-card rounded-2xl p-5 shadow-sm border border-gray-100">
-            <div
-              class="w-9 h-9 rounded-xl bg-purple-100 text-purple-600 flex items-center justify-center mb-3">
-              <i data-lucide="lightbulb" class="w-5 h-5"></i>
-            </div>
-            <h3 class="font-semibold text-sm mb-1">Education Included</h3>
-            <p class="text-xs text-gray-600">I leave you with tips, simple notes, or checklists so you feel confident
-              using your tech.</p>
-          </div>
-        </div>
-      </div>
-    </div>
-  </section>
-
 
   <!-- ========================================================= -->
   <!-- ======================= PRICING ========================== -->
@@ -415,7 +364,7 @@
 
       <div class="grid md:grid-cols-2 gap-6 fade-up">
 
-        <!-- 90-Minute In-Home Visit -->
+        <!-- In Home Visit -->
         <div class="rounded-2xl p-7 shadow-sm border border-gray-200 bg-white flex flex-col">
           <p class="text-xs font-semibold uppercase text-gray-500 mb-1">In-Home Session</p>
           <h3 class="text-lg font-bold mb-1">90-Minute In-Home Visit</h3>
@@ -432,7 +381,6 @@
             <li>• Follow-up rate: $45 per hour</li>
           </ul>
 
-          <!-- Contact Options -->
           <div class="mt-auto flex flex-col gap-2 text-sm font-semibold">
             <a href="tel:6038330660" class="text-blue-600 hover:text-blue-700 flex items-center gap-2">
               <i data-lucide="phone" class="w-4 h-4"></i> Call 603-833-0660
@@ -465,7 +413,6 @@
             <li>• App setup, accounts, device organization</li>
           </ul>
 
-          <!-- Contact Options -->
           <div class="mt-auto flex flex-col gap-2 text-sm font-semibold">
             <a href="tel:6038330660" class="text-blue-600 hover:text-blue-700 flex items-center gap-2">
               <i data-lucide="phone" class="w-4 h-4"></i> Call 603-833-0660
@@ -512,8 +459,7 @@
             </div>
           </div>
           <p class="text-sm text-gray-700">
-            “Josh organized all our streaming apps, fixed our Wi-Fi dead spots, and made it easy enough that my parents
-            can use it without getting frustrated.”
+            “Josh organized all our streaming apps, fixed our Wi-Fi dead spots, and made it easy enough that my parents can use it without getting frustrated.”
           </p>
         </div>
 
@@ -528,8 +474,7 @@
             </div>
           </div>
           <p class="text-sm text-gray-700">
-            “He set up our cameras and smart doorbell, showed us how the app works, and even labeled things so we
-            wouldn’t forget.”
+            “He set up our cameras and smart doorbell, showed us how the app works, and even labeled things so we wouldn’t forget.”
           </p>
         </div>
 
@@ -544,14 +489,12 @@
             </div>
           </div>
           <p class="text-sm text-gray-700">
-            “Josh is patient, kind, and never makes you feel silly for asking basic questions. I finally feel comfortable
-            using my phone and tablet.”
+            “Josh is patient, kind, and never makes you feel silly for asking basic questions. I finally feel comfortable using my phone and tablet.”
           </p>
         </div>
       </div>
     </div>
   </section>
-
 
   <!-- ========================================================= -->
   <!-- ==================== SERVICE AREA ======================== -->
@@ -563,7 +506,7 @@
       <h2 class="text-3xl md:text-4xl font-bold mb-4">Serving the Seacoast & North Shore</h2>
 
       <p class="text-gray-600 max-w-2xl mx-auto mb-10">
-        In-home visits are available across the Seacoast NH area and nearby Massachusetts towns. 
+        In-home visits are available across the Seacoast NH area and nearby Massachusetts towns.
         Remote sessions are available from anywhere.
       </p>
 
@@ -617,129 +560,6 @@
   </section>
 
   <!-- ========================================================= -->
-  <!-- ============ REQUEST TECH HELP / APPOINTMENT ============ -->
-  <!-- ========================================================= -->
-  <section class="py-14 md:py-16 bg-gray-50 border-t border-gray-200">
-    <div class="max-w-4xl mx-auto px-4 fade-up">
-      <div class="text-center mb-6">
-        <p class="text-xs font-semibold tracking-[0.2em] uppercase text-blue-600 mb-2">
-          Request Tech Help or Appointment
-        </p>
-        <h2 class="text-2xl md:text-3xl font-bold mb-3">
-          Tell Me What You Need Help With
-        </h2>
-        <p class="text-gray-600 text-sm md:text-base max-w-2xl mx-auto">
-          Fill out this quick form and I’ll follow up as soon as I can. You’ll also get a confirmation text that your request was received.
-        </p>
-      </div>
-
-      <div class="glass-card rounded-3xl shadow-xl border border-blue-100 px-6 py-6 md:px-8 md:py-8">
-        <form id="lead-form" class="space-y-5">
-          <!-- Row: Name / Email -->
-          <div class="grid md:grid-cols-2 gap-4">
-            <div class="text-sm text-left">
-              <label for="name" class="block font-semibold text-gray-800 mb-1">Name<span class="text-red-500">*</span></label>
-              <input id="name" name="name" type="text" required
-                class="w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Your name">
-            </div>
-            <div class="text-sm text-left">
-              <label for="email" class="block font-semibold text-gray-800 mb-1">Email<span class="text-red-500">*</span></label>
-              <input id="email" name="email" type="email" required
-                class="w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="you@example.com">
-            </div>
-          </div>
-
-          <!-- Row: Phone / Address -->
-          <div class="grid md:grid-cols-2 gap-4">
-            <div class="text-sm text-left">
-              <label for="phone" class="block font-semibold text-gray-800 mb-1">Phone<span class="text-red-500">*</span></label>
-              <input id="phone" name="phone" type="tel" required
-                class="w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="603-555-1234">
-            </div>
-            <div class="text-sm text-left">
-              <label for="address" class="block font-semibold text-gray-800 mb-1">Address (City / Town)</label>
-              <input id="address" name="address" type="text"
-                class="w-full rounded-xl border border-gray-300 px-3 py-2.5 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Hampton, NH">
-            </div>
-          </div>
-
-          <!-- Services radio group -->
-          <div class="text-sm text-left">
-            <p class="block font-semibold text-gray-800 mb-2">What do you need help with?<span class="text-red-500">*</span></p>
-            <div class="grid md:grid-cols-2 gap-2">
-              <label class="flex items-start gap-2 cursor-pointer">
-                <input type="radio" name="service" value="Streaming & TV Setup" required class="mt-1">
-                <span>Streaming &amp; TV Setup</span>
-              </label>
-              <label class="flex items-start gap-2 cursor-pointer">
-                <input type="radio" name="service" value="Cable Cutting & Streaming Setup" class="mt-1">
-                <span>Cable Cutting &amp; Streaming Setup</span>
-              </label>
-              <label class="flex items-start gap-2 cursor-pointer">
-                <input type="radio" name="service" value="Cable Cutting & Savings" class="mt-1">
-                <span>Cable Cutting &amp; Savings</span>
-              </label>
-              <label class="flex items-start gap-2 cursor-pointer">
-                <input type="radio" name="service" value="Wi-Fi Fixes & Upgrades" class="mt-1">
-                <span>Wi-Fi Fixes &amp; Upgrades</span>
-              </label>
-              <label class="flex items-start gap-2 cursor-pointer">
-                <input type="radio" name="service" value="Smart Home & Voice Assistants" class="mt-1">
-                <span>Smart Home &amp; Voice Assistants</span>
-              </label>
-              <label class="flex items-start gap-2 cursor-pointer">
-                <input type="radio" name="service" value="Device Help & Training" class="mt-1">
-                <span>Device Help &amp; Training</span>
-              </label>
-              <label class="flex items-start gap-2 cursor-pointer">
-                <input type="radio" name="service" value="Security Cameras" class="mt-1">
-                <span>Security Cameras</span>
-              </label>
-              <label class="flex items-start gap-2 cursor-pointer">
-                <input id="service-other" type="radio" name="service" value="Other" class="mt-1">
-                <span>Other</span>
-              </label>
-            </div>
-
-            <div id="other-details-wrapper" class="mt-3 hidden">
-              <label for="other-details" class="block text-xs font-medium text-gray-700 mb-1">
-                Briefly describe what you need help with:
-              </label>
-              <textarea id="other-details" name="otherDetails" rows="2"
-                class="w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-                placeholder="Example: help setting up TV and streaming for my parents."></textarea>
-            </div>
-          </div>
-
-          <!-- Message -->
-          <div class="text-sm text-left">
-            <label for="message" class="block font-semibold text-gray-800 mb-1">
-              Anything else you'd like me to know?
-            </label>
-            <textarea id="message" name="message" rows="3"
-              class="w-full rounded-xl border border-gray-300 px-3 py-2 text-sm focus:outline-none focus:ring-2 focus:ring-blue-500 focus:border-blue-500"
-              placeholder="Short description of your situation (optional)."></textarea>
-          </div>
-
-          <!-- Submit + status -->
-          <div class="flex flex-col sm:flex-row sm:items-center sm:justify-between gap-3">
-            <button id="lead-submit" type="submit"
-              class="inline-flex items-center justify-center gap-2 bg-blue-600 hover:bg-blue-700 text-white font-semibold px-6 py-3 rounded-full text-sm shadow-lg">
-              <i data-lucide="send" class="w-4 h-4"></i>
-              Submit Request
-            </button>
-            <p id="lead-status" class="text-xs sm:text-sm text-gray-600 hidden"></p>
-          </div>
-        </form>
-      </div>
-    </div>
-  </section>
-
-  <!-- ========================================================= -->
   <!-- ========================= FOOTER ========================= -->
   <!-- ========================================================= -->
   <footer class="bg-gray-900 text-gray-300 py-6 px-4">
@@ -764,117 +584,47 @@
     <a href="sms:6038330660"><i data-lucide="message-circle"></i> Text</a>
   </div>
 
+  <!-- ========================= FORM SCRIPT ========================= -->
   <script>
-    // Render Lucide icons
     lucide.createIcons();
 
-    // quick hack to render the service area chip list that was built as a template string
-    const areaSection = document.querySelector(
-      'section.py-14.md\\:py-16.bg-gray-50.border-b.border-gray-200 div.grid'
-    );
-    if (areaSection && areaSection.innerHTML.includes('{[')) {
-      const areas = [
-        "Hampton",
-        "Seabrook",
-        "Portsmouth",
-        "Exeter",
-        "Salisbury",
-        "Newburyport",
-        "Rowley",
-        "Amesbury"
-      ];
-      areaSection.innerHTML = areas.map(area => `
-        <div class="glass-card rounded-xl p-4 text-center shadow-sm border border-gray-100">
-          <div class="flex items-center justify-center gap-2 text-sm font-semibold text-gray-800">
-            <i data-lucide="map-pin" class="w-4 h-4 text-blue-600"></i>
-            <span>${area}</span>
-          </div>
-        </div>
-      `).join("");
-      lucide.createIcons();
-    }
+    const form = document.getElementById("leadForm");
+    const status = document.getElementById("formStatus");
 
-    // =========================
-    // Lead form logic
-    // =========================
-    const leadForm = document.getElementById('lead-form');
-    const leadStatus = document.getElementById('lead-status');
-    const leadSubmitBtn = document.getElementById('lead-submit');
-    const serviceRadios = document.querySelectorAll('input[name="service"]');
-    const serviceOtherRadio = document.getElementById('service-other');
-    const otherDetailsWrapper = document.getElementById('other-details-wrapper');
-    const otherDetailsInput = document.getElementById('other-details');
+    form.addEventListener("submit", async (e) => {
+      e.preventDefault();
 
-    // Show/hide "Other details" when Other is selected
-    if (serviceRadios && otherDetailsWrapper) {
-      serviceRadios.forEach(r => {
-        r.addEventListener('change', () => {
-          if (serviceOtherRadio && serviceOtherRadio.checked) {
-            otherDetailsWrapper.classList.remove('hidden');
-          } else {
-            otherDetailsWrapper.classList.add('hidden');
-            if (otherDetailsInput) otherDetailsInput.value = '';
-          }
+      const name = document.getElementById("name").value.trim();
+      const email = document.getElementById("email").value.trim();
+      const phone = document.getElementById("phone").value.trim();
+      const address = document.getElementById("address").value.trim();
+      const service = document.querySelector("input[name='service']:checked")?.value;
+
+      status.textContent = "Sending...";
+      status.className = "text-blue-600 text-sm text-center";
+
+      try {
+        const res = await fetch("/api/send-text", {
+          method: "POST",
+          headers: { "Content-Type": "application/json" },
+          body: JSON.stringify({ name, email, phone, address, service }),
         });
-      });
-    }
 
-    if (leadForm) {
-      leadForm.addEventListener('submit', async (e) => {
-        e.preventDefault();
-        if (!leadStatus || !leadSubmitBtn) return;
+        const data = await res.json();
 
-        leadStatus.classList.remove('hidden');
-        leadStatus.classList.remove('text-red-600', 'text-green-600');
-        leadStatus.textContent = 'Sending your request...';
-        leadSubmitBtn.disabled = true;
-        leadSubmitBtn.classList.add('opacity-70', 'cursor-not-allowed');
-
-        const formData = new FormData(leadForm);
-        const data = {
-          name: formData.get('name') || '',
-          email: formData.get('email') || '',
-          phone: formData.get('phone') || '',
-          address: formData.get('address') || '',
-          service: formData.get('service') || '',
-          otherDetails: formData.get('otherDetails') || '',
-          message: formData.get('message') || ''
-        };
-
-        try {
-          const res = await fetch('/api/send-text', {
-            method: 'POST',
-            headers: {
-              'Content-Type': 'application/json'
-            },
-            body: JSON.stringify(data)
-          });
-
-          if (res.ok) {
-            leadStatus.textContent = 'Thanks! Your request was sent. I’ll follow up as soon as I can.';
-            leadStatus.classList.add('text-green-600');
-            leadForm.reset();
-            if (otherDetailsWrapper) {
-              otherDetailsWrapper.classList.add('hidden');
-            }
-          } else {
-            const errorData = await res.json().catch(() => ({}));
-            console.error('Error response:', errorData);
-            leadStatus.textContent = 'Something went wrong sending your request. Please call or text me directly.';
-            leadStatus.classList.add('text-red-600');
-          }
-        } catch (err) {
-          console.error('Network error:', err);
-          leadStatus.textContent = 'Network error. Please try again or contact me by phone/text.';
-          leadStatus.classList.add('text-red-600');
-        } finally {
-          leadSubmitBtn.disabled = false;
-          leadSubmitBtn.classList.remove('opacity-70', 'cursor-not-allowed');
+        if (data.success) {
+          status.textContent = "Request sent successfully! I’ll text you shortly.";
+          status.className = "text-green-600 text-sm text-center";
+          form.reset();
+        } else {
+          throw new Error();
         }
-      });
-    }
+      } catch (err) {
+        status.textContent = "Error sending request. Try again.";
+        status.className = "text-red-600 text-sm text-center";
+      }
+    });
   </script>
 
 </body>
-
 </html>
